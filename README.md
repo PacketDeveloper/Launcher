@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="755" height="175" src="assets/images/logo.png">
+	<img width="755" height="175" src="https://github.com/PacketDeveloper/PacketClientDLLS/blob/main/assets/images/logo.png">
 </p>
 
 # Info
