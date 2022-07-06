@@ -4,8 +4,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Security.Principal;
@@ -15,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PacketClientInjector
 {
-	public class MainForm : Form
+    public class MainForm : Form
 	{
 		private Color hoverTextColor = Color.FromArgb(124, 124, 124);
 
@@ -298,7 +296,7 @@ namespace PacketClientInjector
 
 		private void Close(MouseEventArgs e)
 		{
-			if (e.Button == System.Windows.Forms.MouseButtons.Left)
+			if (e.Button == MouseButtons.Left)
 			{
 				base.Close();
 			}
@@ -349,7 +347,7 @@ namespace PacketClientInjector
             this.BottomBorderPanel = new Panel();
             this.TopBorderPanel = new Panel();
             this.DecorationToolTip = new ToolTip(this.components);
-			this.TabControl = new TabControl();
+            this.TabControl = new TabControl();
             this.Home = new TabPage();
             this.pictureBox4 = new PictureBox();
             this.pictureBox2 = new PictureBox();
@@ -368,11 +366,10 @@ namespace PacketClientInjector
             this.DevInjectPageTab = new Label();
             this.HelpPageTab = new Label();
             this.pictureBox1 = new PictureBox();
-			this.Devbutton = new Button();
+            this.Devbutton = new Button();
             this.TabControl.SuspendLayout();
             this.Home.SuspendLayout();
-			this.Devbutton = new Button();
-            ISupportInitialize pictureBox41 = (ISupportInitialize)this.pictureBox4;
+            ((ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Dev.SuspendLayout();
             ((ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -382,23 +379,23 @@ namespace PacketClientInjector
             // 
             // MinimizeLabel
             // 
-            this.MinimizeLabel.Anchor = ((AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MinimizeLabel.Anchor = ((AnchorStyles)((AnchorStyles.Top | AnchorStyles.Right)));
             this.MinimizeLabel.BackColor = Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.MinimizeLabel.Font = new Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimizeLabel.Location = new System.Drawing.Point(683, 1);
+            this.MinimizeLabel.Font = new Font("Segoe UI Black", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeLabel.Location = new Point(683, 1);
             this.MinimizeLabel.Name = "MinimizeLabel";
-            this.MinimizeLabel.Size = new System.Drawing.Size(23, 23);
+            this.MinimizeLabel.Size = new Size(23, 23);
             this.MinimizeLabel.TabIndex = 20;
             this.MinimizeLabel.Text = "0";
-            this.MinimizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MinimizeLabel.TextAlign = ContentAlignment.MiddleCenter;
             this.DecorationToolTip.SetToolTip(this.MinimizeLabel, "Minimize");
-            this.MinimizeLabel.Click += new System.EventHandler(this.MinimizeLabel_Click);
+            this.MinimizeLabel.Click += new EventHandler(this.MinimizeLabel_Click);
             // 
             // CloseLabel
             // 
-            this.CloseLabel.Anchor = ((AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseLabel.Anchor = ((AnchorStyles)((AnchorStyles.Top | AnchorStyles.Right)));
             this.CloseLabel.BackColor = Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.CloseLabel.Font = new Font("Marlett", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLabel.Font = new Font("Marlett", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.CloseLabel.Location = new Point(709, 1);
             this.CloseLabel.Name = "CloseLabel";
             this.CloseLabel.Size = new Size(23, 23);
@@ -411,7 +408,7 @@ namespace PacketClientInjector
             // 
             this.TitleLabel.BackColor = Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.TitleLabel.Dock = DockStyle.Top;
-            this.TitleLabel.Font = new Font("Minecraft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.TitleLabel.Location = new Point(0, 0);
             this.TitleLabel.Name = "TitleLabel";
@@ -426,46 +423,46 @@ namespace PacketClientInjector
             // 
             // RightBorderPanel
             // 
-            this.RightBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RightBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.RightBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.RightBorderPanel.Location = new System.Drawing.Point(733, 1);
+            this.RightBorderPanel.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Bottom) 
+            | AnchorStyles.Right)));
+            this.RightBorderPanel.BackColor = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.RightBorderPanel.Cursor = Cursors.SizeWE;
+            this.RightBorderPanel.Location = new Point(733, 1);
             this.RightBorderPanel.Name = "RightBorderPanel";
-            this.RightBorderPanel.Size = new System.Drawing.Size(1, 409);
+            this.RightBorderPanel.Size = new Size(1, 409);
             this.RightBorderPanel.TabIndex = 19;
             // 
             // LeftBorderPanel
             // 
-            this.LeftBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.LeftBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.LeftBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.LeftBorderPanel.Location = new System.Drawing.Point(0, 1);
+            this.LeftBorderPanel.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Bottom) 
+            | AnchorStyles.Left)));
+            this.LeftBorderPanel.BackColor = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.LeftBorderPanel.Cursor = Cursors.SizeWE;
+            this.LeftBorderPanel.Location = new Point(0, 1);
             this.LeftBorderPanel.Name = "LeftBorderPanel";
-            this.LeftBorderPanel.Size = new System.Drawing.Size(1, 409);
+            this.LeftBorderPanel.Size = new Size(1, 409);
             this.LeftBorderPanel.TabIndex = 18;
             // 
             // BottomBorderPanel
             // 
-            this.BottomBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BottomBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.BottomBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.BottomBorderPanel.Location = new System.Drawing.Point(-5, 410);
+            this.BottomBorderPanel.Anchor = ((AnchorStyles)(((AnchorStyles.Bottom | AnchorStyles.Left) 
+            | AnchorStyles.Right)));
+            this.BottomBorderPanel.BackColor = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.BottomBorderPanel.Cursor = Cursors.SizeNS;
+            this.BottomBorderPanel.Location = new Point(-5, 410);
             this.BottomBorderPanel.Name = "BottomBorderPanel";
-            this.BottomBorderPanel.Size = new System.Drawing.Size(742, 1);
+            this.BottomBorderPanel.Size = new Size(742, 1);
             this.BottomBorderPanel.TabIndex = 17;
             // 
             // TopBorderPanel
             // 
-            this.TopBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TopBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.TopBorderPanel.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.TopBorderPanel.Location = new System.Drawing.Point(-2, 0);
+            this.TopBorderPanel.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Left) 
+            | AnchorStyles.Right)));
+            this.TopBorderPanel.BackColor = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.TopBorderPanel.Cursor = Cursors.SizeNS;
+            this.TopBorderPanel.Location = new Point(-2, 0);
             this.TopBorderPanel.Name = "TopBorderPanel";
-            this.TopBorderPanel.Size = new System.Drawing.Size(737, 1);
+            this.TopBorderPanel.Size = new Size(737, 1);
             this.TopBorderPanel.TabIndex = 16;
             // 
             // TabControl
@@ -473,71 +470,71 @@ namespace PacketClientInjector
             this.TabControl.Controls.Add(this.Home);
             this.TabControl.Controls.Add(this.Dev);
             this.TabControl.Controls.Add(this.Help);
-            this.TabControl.Location = new System.Drawing.Point(-7, -1);
+            this.TabControl.Location = new Point(-7, -1);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(749, 416);
+            this.TabControl.Size = new Size(749, 416);
             this.TabControl.TabIndex = 25;
-            this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
+            this.TabControl.SelectedIndexChanged += new EventHandler(this.TabControl_SelectedIndexChanged);
             // 
             // Home
             // 
-            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Home.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Home.Controls.Add(this.pictureBox4);
             this.Home.Controls.Add(this.pictureBox2);
             this.Home.Controls.Add(this.ProgressBar);
             this.Home.Controls.Add(this.Infolabel);
             this.Home.Controls.Add(this.InjectButton);
-            this.Home.Location = new System.Drawing.Point(4, 22);
+            this.Home.Location = new Point(4, 22);
             this.Home.Name = "Home";
-            this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(741, 390);
+            this.Home.Padding = new Padding(3);
+            this.Home.Size = new Size(741, 390);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
-            this.Home.Click += new System.EventHandler(this.Home_Click);
+            this.Home.Click += new EventHandler(this.Home_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(690, 357);
+            this.pictureBox4.BackColor = Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.pictureBox4.BackgroundImage = ((Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            this.pictureBox4.Location = new Point(690, 357);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.Size = new Size(47, 30);
+            this.pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.Click += new EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 80);
+            this.pictureBox2.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.pictureBox2.BackgroundImage = ((Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            this.pictureBox2.Location = new Point(49, 50);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(634, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.Size = new Size(634, 100);
+            this.pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new EventHandler(this.pictureBox2_Click);
             // 
             // ProgressBar
             // 
-            this.ProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.ProgressBar.Location = new System.Drawing.Point(233, 186);
+            this.ProgressBar.BackColor = Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.ProgressBar.Location = new Point(233, 186);
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(270, 7);
+            this.ProgressBar.Size = new Size(270, 7);
             this.ProgressBar.TabIndex = 33;
             // 
             // Infolabel
             // 
             this.Infolabel.AutoSize = true;
-            this.Infolabel.Font = new System.Drawing.Font("Minecraft", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Infolabel.ForeColor = System.Drawing.Color.White;
-            this.Infolabel.Location = new System.Drawing.Point(6, 369);
+            this.Infolabel.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.Infolabel.ForeColor = Color.White;
+            this.Infolabel.Location = new Point(6, 369);
             this.Infolabel.Name = "Infolabel";
-            this.Infolabel.Size = new System.Drawing.Size(130, 23);
+            this.Infolabel.Size = new Size(110, 24);
             this.Infolabel.TabIndex = 32;
             this.Infolabel.Text = "Not Injected";
             // 
@@ -545,8 +542,8 @@ namespace PacketClientInjector
             // 
             this.InjectButton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.InjectButton.BorderStyle = BorderStyle.FixedSingle;
-            this.InjectButton.Font = new Font("Minecraft", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.InjectButton.ForeColor = Color.Gray;
+            this.InjectButton.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.InjectButton.ForeColor = Color.Gray;
             this.InjectButton.Location = new Point(233, 198);
             this.InjectButton.Name = "InjectButton";
             this.InjectButton.Size = new Size(270, 80);
@@ -557,24 +554,24 @@ namespace PacketClientInjector
             // 
             // Dev
             // 
-            Dev.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            Dev.Controls.Add(this.pictureBox5);
-            Dev.Controls.Add(this.uselessthingjustneededfortheinjectfunction);
-            Dev.Controls.Add(this.InjectDllButton);
-            Dev.Controls.Add(this.pictureBox3);
-            Dev.Controls.Add(this.DevInfoText);
-            Dev.Controls.Add(this.LocateDllButton);
-            Dev.Location = new Point(4, 22);
-            Dev.Name = "Dev";
-            Dev.Padding = new Padding(3);
-            Dev.Size = new Size(741, 390);
-            Dev.TabIndex = 1;
-            Dev.Text = "Dev";
+            this.Dev.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Dev.Controls.Add(this.pictureBox5);
+            this.Dev.Controls.Add(this.uselessthingjustneededfortheinjectfunction);
+            this.Dev.Controls.Add(this.InjectDllButton);
+            this.Dev.Controls.Add(this.pictureBox3);
+            this.Dev.Controls.Add(this.DevInfoText);
+            this.Dev.Controls.Add(this.LocateDllButton);
+            this.Dev.Location = new Point(4, 22);
+            this.Dev.Name = "Dev";
+            this.Dev.Padding = new Padding(3);
+            this.Dev.Size = new Size(741, 390);
+            this.Dev.TabIndex = 1;
+            this.Dev.Text = "Dev";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.pictureBox5.BackgroundImage = (Image)(resources.GetObject("pictureBox5.BackgroundImage"));
+            this.pictureBox5.BackgroundImage = ((Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
             this.pictureBox5.Location = new Point(691, 357);
             this.pictureBox5.Name = "pictureBox5";
@@ -595,7 +592,7 @@ namespace PacketClientInjector
             // 
             this.InjectDllButton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.InjectDllButton.BorderStyle = BorderStyle.FixedSingle;
-            this.InjectDllButton.Font = new Font("Minecraft", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.InjectDllButton.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.InjectDllButton.ForeColor = Color.White;
             this.InjectDllButton.Location = new Point(372, 198);
             this.InjectDllButton.Name = "InjectDllButton";
@@ -604,22 +601,11 @@ namespace PacketClientInjector
             this.InjectDllButton.Text = "Inject";
             this.InjectDllButton.TextAlign = ContentAlignment.MiddleCenter;
             this.InjectDllButton.Click += new EventHandler(this.InjectDllButton_Click);
-
-			// Dev Button
-			this.Devbutton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-			this.Devbutton.Font = new Font("Minecraft", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-			this.Devbutton.BackgroundImage = null;
-			this.Devbutton.ForeColor = Color.Red;
-			this.Devbutton.Name = "awd";
-			this.Devbutton.Location = new Point(Bottom);
-			this.Devbutton.Size = new Size(10, 10);
-			this.Devbutton.TabStop = false;
-			this.Devbutton.TabIndex = 39;
-			// 
-			// pictureBox3
-			//
-			this.pictureBox3.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.pictureBox3.BackgroundImage = (Image)(resources.GetObject("pictureBox3.BackgroundImage"));
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.pictureBox3.BackgroundImage = ((Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             this.pictureBox3.Location = new Point(50, 80);
             this.pictureBox3.Name = "pictureBox3";
@@ -630,11 +616,11 @@ namespace PacketClientInjector
             // DevInfoText
             // 
             this.DevInfoText.AutoSize = true;
-            this.DevInfoText.Font = new Font("Minecraft", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.DevInfoText.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.DevInfoText.ForeColor = Color.White;
             this.DevInfoText.Location = new Point(6, 369);
             this.DevInfoText.Name = "DevInfoText";
-            this.DevInfoText.Size = new Size(130, 23);
+            this.DevInfoText.Size = new Size(110, 24);
             this.DevInfoText.TabIndex = 36;
             this.DevInfoText.Text = "Not Injected";
             // 
@@ -642,7 +628,7 @@ namespace PacketClientInjector
             // 
             this.LocateDllButton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.LocateDllButton.BorderStyle = BorderStyle.FixedSingle;
-            this.LocateDllButton.Font = new Font("Minecraft", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.LocateDllButton.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.LocateDllButton.ForeColor = Color.White;
             this.LocateDllButton.Location = new Point(233, 198);
             this.LocateDllButton.Name = "LocateDllButton";
@@ -709,6 +695,18 @@ namespace PacketClientInjector
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // Devbutton
+            // 
+            this.Devbutton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Devbutton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.Devbutton.ForeColor = Color.Red;
+            this.Devbutton.Location = new Point(315, 0);
+            this.Devbutton.Name = "Devbutton";
+            this.Devbutton.Size = new Size(10, 10);
+            this.Devbutton.TabIndex = 39;
+            this.Devbutton.TabStop = false;
+            this.Devbutton.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new SizeF(6F, 13F);
@@ -729,7 +727,7 @@ namespace PacketClientInjector
             this.Controls.Add(this.HelpPageTab);
             this.FormBorderStyle = FormBorderStyle.None;
             this.Icon = ((Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Packet Client Injector";
+            this.Name = "MainForm";
             this.Text = "Packet Injector";
             this.Load += new EventHandler(this.MainForm_Load);
             this.TabControl.ResumeLayout(false);
