@@ -366,7 +366,6 @@ namespace PacketClientInjector
             this.DevInjectPageTab = new Label();
             this.HelpPageTab = new Label();
             this.pictureBox1 = new PictureBox();
-            this.Devbutton = new Button();
             this.TabControl.SuspendLayout();
             this.Home.SuspendLayout();
             ((ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -694,18 +693,6 @@ namespace PacketClientInjector
             this.pictureBox1.Size = new Size(24, 23);
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
-            // 
-            // Devbutton
-            // 
-            this.Devbutton.BackColor = Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Devbutton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.Devbutton.ForeColor = Color.Red;
-            this.Devbutton.Location = new Point(315, 0);
-            this.Devbutton.Name = "Devbutton";
-            this.Devbutton.Size = new Size(10, 10);
-            this.Devbutton.TabIndex = 39;
-            this.Devbutton.TabStop = false;
-            this.Devbutton.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
